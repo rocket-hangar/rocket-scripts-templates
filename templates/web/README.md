@@ -5,8 +5,9 @@
 ```sh
 npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/web project-directory
 cd project-directory
-yarn
-yarn start
+git init
+yarn # or npm install
+yarn start # or npm start
 ```
 
 ## Scripts
