@@ -1,3 +1,12 @@
+# node
 node_modules/
+
+# generated files
 *.tsbuildinfo
+**/out/
+
+# configuration
 .env
+
+# tools
+.idea/
