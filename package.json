@@ -7,7 +7,7 @@
     "templates/*"
   ],
   "scripts": {
-    "import:rocket-scripts": "ts-node scripts/import.rocket-scripts.ts",
+    "import": "ts-node scripts/import.ts",
     "web:start": "yarn workspace web run start"
   },
   "devDependencies": {
