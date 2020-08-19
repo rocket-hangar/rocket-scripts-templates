@@ -1,0 +1,22 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-scripts",
+  "bugs": "https://github.com/rocket-hangar/rocket-scripts/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-scripts/tree/master/src/@ssen/dev-server-components",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/dev-server-components",
+  "version": "1.0.0-alpha.14",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "ink": "^3.0.3",
+    "react": "^16.13.1"
+  }
+}

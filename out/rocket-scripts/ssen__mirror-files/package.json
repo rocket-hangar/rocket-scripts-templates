@@ -1,0 +1,23 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-scripts",
+  "bugs": "https://github.com/rocket-hangar/rocket-scripts/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-scripts/tree/master/src/@ssen/mirror-files",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/mirror-files",
+  "version": "1.0.0-alpha.14",
+  "dependencies": {
+    "anymatch": "^3.1.1",
+    "chokidar": "^3.4.2",
+    "fs-extra": "^9.0.1",
+    "rxjs": "^6.6.2"
+  }
+}

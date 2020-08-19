@@ -1,0 +1,20 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-scripts",
+  "bugs": "https://github.com/rocket-hangar/rocket-scripts/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-scripts/tree/master/src/@ssen/electron-switches",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/electron-switches",
+  "version": "1.0.0-alpha.14",
+  "dependencies": {
+    "yargs": "^15.4.1"
+  }
+}
