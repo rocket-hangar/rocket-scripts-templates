@@ -1,4 +1,4 @@
-# Web development template of rocket-scripts
+# Web development template
 
 ## Use this template
 

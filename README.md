@@ -1,4 +1,4 @@
-# Project templates of `@rocket-scripts/web` and `@rocket-scripts/electron`
+# Project templates of `@rocket-scripts/*`
 
 ## Templates
 
