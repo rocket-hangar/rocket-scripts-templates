@@ -13,7 +13,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@ssen/dev-server-components",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.15",
   "dependencies": {
     "chalk": "^4.1.0",
     "ink": "^3.0.3",

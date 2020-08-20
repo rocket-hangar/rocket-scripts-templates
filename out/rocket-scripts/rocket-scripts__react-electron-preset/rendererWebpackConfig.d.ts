@@ -1,4 +1,3 @@
-/// <reference types="webpack-dev-server" />
 import { WebpackConfigOptions } from '@rocket-scripts/react-preset/webpackConfig';
 import { Configuration } from 'webpack';
 export interface RendererWebpackConfigOptions extends WebpackConfigOptions {

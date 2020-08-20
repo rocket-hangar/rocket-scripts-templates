@@ -12,8 +12,14 @@ yarn start # or npm start
 
 ## Scripts
 
-- `yarn start` start development (see `scripts/start.ts`)
-- `yarn build` build production (see `scripts/build.ts`)
+- `yarn run start` start development (see `scripts/start.ts`)
+- `yarn run build` build production to `out/app` (see `scripts/build.ts`)
+- `yarn run storybook:start` start storybook
+- `yarn run storybook:build` build storybook to `out/storybook`
+- `yarn run test` jest test
+- `yarn run coverage` jest test to create coverage report
+- `yarn run format` format source codes by prettier
+- `yarn run lint` lint source codes by eslint
 
 ## Directories
 

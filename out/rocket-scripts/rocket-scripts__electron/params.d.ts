@@ -1,5 +1,4 @@
 /// <reference types="node" />
-/// <reference types="webpack-dev-server" />
 import { ElectronSwitchesYargsValues } from '@ssen/electron-switches';
 import { Configuration as WebpackConfiguration } from 'webpack';
 export interface CommonParams {
