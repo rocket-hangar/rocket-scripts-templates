@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "Start attached",
+      "type": "node",
+      "request": "attach",
+      // @see start script of package.json
+      "port": 9688
+    },
+    {
+      "name": "Chrome attached",
+      "type": "chrome",
+      "request": "attach",
+      // @see scripts/start.ts
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
