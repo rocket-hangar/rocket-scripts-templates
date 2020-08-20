@@ -1,0 +1,21 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-punch",
+  "bugs": "https://github.com/rocket-hangar/rocket-punch/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-punch/tree/master/src/@ssen/tmp-directory",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/tmp-directory",
+  "version": "2.1.2",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "tmp": "^0.2.1"
+  }
+}

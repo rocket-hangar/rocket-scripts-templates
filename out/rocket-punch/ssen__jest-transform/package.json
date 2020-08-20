@@ -1,0 +1,24 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-punch",
+  "bugs": "https://github.com/rocket-hangar/rocket-punch/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-punch/tree/master/src/@ssen/jest-transform",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/jest-transform",
+  "version": "2.1.2",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "@svgr/plugin-jsx": "^5.4.0",
+    "mini-svg-data-uri": "^1.2.3",
+    "typescript": "^3.9.7",
+    "js-yaml": "^3.14.0"
+  }
+}

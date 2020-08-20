@@ -1,0 +1,25 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-punch",
+  "bugs": "https://github.com/rocket-hangar/rocket-punch/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-punch/tree/master/src/@ssen/publish-packages",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/publish-packages",
+  "version": "2.1.2",
+  "dependencies": {
+    "@ssen/flat-package-name": "^2.1.2",
+    "fs-extra": "^9.0.1",
+    "package-json": "^6.5.0",
+    "type-fest": "^0.16.0",
+    "prompts": "^2.3.2",
+    "semver": "^7.3.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-punch",
+  "bugs": "https://github.com/rocket-hangar/rocket-punch/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-punch/tree/master/src/@ssen/extended-compiler-host",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/extended-compiler-host",
+  "version": "2.1.2",
+  "dependencies": {
+    "@svgr/plugin-jsx": "^5.4.0",
+    "fs-extra": "^9.0.1",
+    "js-yaml": "^3.14.0",
+    "mini-svg-data-uri": "^1.2.3",
+    "typescript": "^3.9.7",
+    "react": "^16.13.1"
+  }
+}

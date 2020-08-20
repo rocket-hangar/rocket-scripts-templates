@@ -1,0 +1,21 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-punch",
+  "bugs": "https://github.com/rocket-hangar/rocket-punch/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-punch/tree/master/src/@ssen/import-path-rewrite-compiler-host",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@ssen/import-path-rewrite-compiler-host",
+  "version": "2.1.2",
+  "dependencies": {
+    "@ssen/import-path-rewrite": "^2.1.2",
+    "typescript": "^3.9.7"
+  }
+}

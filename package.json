@@ -4,7 +4,9 @@
   "license": "MIT",
   "workspaces": [
     "out/rocket-scripts/*",
-    "templates/*"
+    "out/rocket-punch/*",
+    "templates/*",
+    "snippets/*"
   ],
   "scripts": {
     "import": "ts-node scripts/import.ts",

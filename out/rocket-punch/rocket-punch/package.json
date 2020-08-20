@@ -1,0 +1,46 @@
+{
+  "author": "SSen <i@ssen.name>",
+  "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-punch",
+  "bugs": "https://github.com/rocket-hangar/rocket-punch/issues",
+  "homepage": "https://github.com/rocket-hangar/rocket-punch/tree/master/src/rocket-punch",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "bin": {
+    "rocket-punch": "./bin/rocket-punch.js"
+  },
+  "keywords": [
+    "multi package",
+    "npm",
+    "package",
+    "typescript"
+  ],
+  "name": "rocket-punch",
+  "version": "2.1.2",
+  "dependencies": {
+    "yargs": "^15.4.1",
+    "@ssen/collect-dependencies": "^2.1.2",
+    "@ssen/extended-compiler-host": "^2.1.2",
+    "@ssen/flat-package-name": "^2.1.2",
+    "@ssen/import-path-rewrite-compiler-host": "^2.1.2",
+    "@ssen/promised": "^2.1.2",
+    "@ssen/rewrite-src-path": "^2.1.2",
+    "fs-extra": "^9.0.1",
+    "type-fest": "^0.16.0",
+    "typescript": "^3.9.7",
+    "@ssen/read-tsconfig": "^2.1.2",
+    "depcheck": "^1.0.0",
+    "ts-jest": "^26.1.4",
+    "@ssen/jest-transform": "^2.1.2",
+    "@ssen/publish-packages": "^2.1.2",
+    "package-json": "^6.5.0",
+    "js-yaml": "^3.14.0",
+    "chalk": "^4.1.0"
+  }
+}
