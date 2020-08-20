@@ -1,5 +1,9 @@
 # Express.js Server + Web development Snippet
 
+you can develop both of back-end server and front-end in a polyrepo.
+
+but, I'm not recommend this sample. in this case monorepo is better.
+
 ## Strategy
 
 - `yarn run start` (see `scripts/start.ts`)
