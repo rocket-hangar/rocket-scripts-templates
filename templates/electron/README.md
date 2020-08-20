@@ -14,6 +14,7 @@ yarn start # or npm start
 
 - `yarn run start` start development (see `scripts/start.ts`)
 - `yarn run build` build production to `out/app` (see `scripts/build.ts`)
+- `yarn run pack` create executable from `out/app` to `apps/app` (see `scripts/pack.ts`)
 - `yarn run storybook:start` start storybook
 - `yarn run storybook:build` build storybook to `out/storybook`
 - `yarn run test` jest test

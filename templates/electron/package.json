@@ -4,10 +4,12 @@
   "scripts": {
     "app:build": "ts-node --project tsconfig.script.json scripts/build.ts",
     "app:start": "ts-node --project tsconfig.script.json scripts/start.ts",
+    "app:pack": "ts-node --project tsconfig.script.json scripts/pack.ts",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook --output-dir out/storybook",
     "build": "npm run app:build",
     "start": "npm run app:start",
+    "pack": "npm run app:pack",
     "test": "jest --colors",
     "coverage": "jest --coverage",
     "format": "prettier --write \"src/{**/*,*}/*.{ts,tsx}\"",
@@ -29,6 +31,7 @@
     "@rocket-scripts/electron": "^1.0.0-alpha.13",
     "@ssen/eslint-config": "^1.1.0",
     "@ssen/prettier-config": "^1.0.0",
+    "@ssen/promised": "^2.1.2",
     "@storybook/addon-essentials": "^6.0.13",
     "@storybook/addon-storysource": "^6.0.13",
     "@storybook/react": "^6.0.13",
@@ -39,8 +42,11 @@
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@types/webpack-env": "^1.15.1",
+    "electron": "^9.2.1",
+    "electron-packager": "^15.0.0",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
+    "extract-zip": "^2.0.1",
     "husky": "^4.2.5",
     "jest": "^26.4.0",
     "lint-staged": "^10.2.11",
@@ -51,7 +57,6 @@
     "react-dom": "^16.13.1",
     "storybook": "^6.0.13",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.5",
-    "electron": "^9.2.1"
+    "typescript": "^3.9.5"
   }
 }
