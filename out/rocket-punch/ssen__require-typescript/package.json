@@ -13,7 +13,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@ssen/require-typescript",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "dependencies": {
     "typescript": "^3.9.7"
   }

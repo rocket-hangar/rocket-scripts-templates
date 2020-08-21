@@ -1,8 +1,18 @@
-# Express.js Server + Web development Snippet
+# Express.js Server + Web development
 
 you can develop both of back-end server and front-end in a polyrepo.
 
-but, I'm not recommend this sample. in this case monorepo is better.
+but, I'm not recommend this sample. in this case I think that monorepo is better.
+
+## Run this sample
+
+```sh
+npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/samples/web-with-backend project-directory
+cd project-directory
+git init
+yarn # or npm install
+yarn start # or npm start
+```
 
 ## Strategy
 
