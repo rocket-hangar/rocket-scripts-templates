@@ -9,11 +9,7 @@
     "examples/*"
   ],
   "scripts": {
-    "import": "ts-node scripts/import.ts",
-    "web:start": "yarn workspace web run start",
-    "web:build": "yarn workspace web run build",
-    "typesync": "find ./templates/*/package.json -exec typesync {} \\;",
-    "postinstall": "yarn typesync"
+    "import": "node -r dotenv/config -r ts-node/register scripts/import.ts"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
