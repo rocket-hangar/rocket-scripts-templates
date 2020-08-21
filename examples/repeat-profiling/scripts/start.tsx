@@ -33,7 +33,22 @@ function ProfileRepeater({
       `animate-${format(new Date(), 'yyyy-MM-dd-hhmmss')}.json`,
     );
 
-    await page.tracing.start({ path: profile, screenshots: true, categories: ['devtools.timeline'] });
+    await page.tracing.start({
+      path: profile,
+      screenshots: true,
+      // @see ~/tracing.categories.json
+      // const cdp: CDPSession = await page._client;
+      // const categories = await cdp.send('Tracing.getCategories');
+      categories: [
+        'devtools.timeline',
+        'disabled-by-default-devtools.timeline',
+        'disabled-by-default-devtools.timeline.frame',
+        'disabled-by-default-devtools.timeline.stack',
+        'disabled-by-default-v8.cpu_profiler',
+        'disabled-by-default-v8.cpu_profiler.hires',
+        'memory',
+      ],
+    });
 
     await page.goto(pageUrl);
 
@@ -93,7 +108,7 @@ function ProfileRepeater({
   await fs.mkdirp(profileStore);
 
   const browser = await puppeteer.launch({
-    //userDataDir: process.env.CHROMIUM_USER_DATA_DEBUG,
+    userDataDir: process.env.CHROMIUM_USER_DATA_DEBUG,
     headless: false,
     args: ['--start-fullscreen', `--remote-debugging-port=${remoteDebuggingPort}`],
     devtools: true,
