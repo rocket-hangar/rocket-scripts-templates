@@ -26,7 +26,7 @@ const ink_1 = require("ink");
 const react_1 = __importStar(require("react"));
 const types_1 = require("./types");
 const date_fns_1 = require("date-fns");
-function DevServerUI({ header, webpackServer, electronServer, syncStaticFiles, cwd, logfile, restartAlarm, }) {
+function DevServerUI({ header, webpackServer, electronServer, syncStaticFiles, cwd, logfile, restartAlarm, children, }) {
     const [webpackServerStatus, setWebpackServerStatus] = react_1.useState(types_1.WebpackServerStatus.STARTING);
     const [webpackMainStats, setWebpackMainStats] = react_1.useState({ status: 'waiting' });
     const [webpackRendererStats, setWebpackRendererStats] = react_1.useState({ status: 'waiting' });
@@ -157,7 +157,8 @@ function DevServerUI({ header, webpackServer, electronServer, syncStaticFiles, c
                 "] [",
                 type,
                 "] ",
-                file)))))));
+                file))))),
+        children));
 }
 exports.DevServerUI = DevServerUI;
 //# sourceMappingURL=DevServerUI.js.map

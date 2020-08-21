@@ -13,7 +13,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@ssen/ink-helpers",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.0-alpha.16",
   "dependencies": {
     "ink": "^3.0.3",
     "react": "^16.13.1"

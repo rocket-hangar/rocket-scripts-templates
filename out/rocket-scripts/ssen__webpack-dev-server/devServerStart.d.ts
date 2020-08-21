@@ -9,5 +9,6 @@ export interface DevServerStartParams extends DevServerParams {
     cwd?: string;
     logfile?: string;
     restartAlarm?: Observable<string[]>;
+    children?: ReactNode;
 }
-export declare function devServerStart({ stdout, stdin, header, cwd, logfile, port, hostname, webpackConfig, devServerConfig, restartAlarm, }: DevServerStartParams): Promise<() => Promise<void>>;
+export declare function devServerStart({ stdout, stdin, header, cwd, logfile, port, hostname, webpackConfig, devServerConfig, restartAlarm, children, }: DevServerStartParams): Promise<() => Promise<void>>;

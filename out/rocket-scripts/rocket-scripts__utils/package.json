@@ -13,7 +13,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@rocket-scripts/utils",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.0-alpha.16",
   "dependencies": {
     "fs-extra": "^9.0.1",
     "eslint-loader": "^4.0.2",

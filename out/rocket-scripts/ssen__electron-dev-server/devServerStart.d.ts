@@ -16,5 +16,6 @@ export interface DevServerStartParams {
     logfile?: string;
     electronSwitches?: ElectronSwitchesYargsValues;
     restartAlarm?: Observable<string[]>;
+    children?: ReactNode;
 }
-export declare function devServerStart({ mainWebpackConfig, rendererWebpackConfig, staticFileDirectories, stdout, stdin, header, cwd, outDir, logfile, electronSwitches, restartAlarm, }: DevServerStartParams): Promise<() => Promise<void>>;
+export declare function devServerStart({ mainWebpackConfig, rendererWebpackConfig, staticFileDirectories, stdout, stdin, header, cwd, outDir, logfile, electronSwitches, restartAlarm, children, }: DevServerStartParams): Promise<() => Promise<void>>;

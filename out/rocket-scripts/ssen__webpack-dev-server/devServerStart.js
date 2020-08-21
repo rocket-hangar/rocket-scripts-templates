@@ -15,7 +15,7 @@ const webpack_merge_1 = require("webpack-merge");
 const DevServer_1 = require("./DevServer");
 const DevServerUI_1 = require("./DevServerUI");
 const patchProxyLogger_1 = require("./utils/patchProxyLogger");
-async function devServerStart({ stdout = process.stdout, stdin = process.stdin, header, cwd = process.cwd(), logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, port, hostname, webpackConfig, devServerConfig, restartAlarm, }) {
+async function devServerStart({ stdout = process.stdout, stdin = process.stdin, header, cwd = process.cwd(), logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, port, hostname, webpackConfig, devServerConfig, restartAlarm, children, }) {
     console.clear();
     if (!fs_extra_1.default.existsSync(path_1.default.dirname(logfile))) {
         fs_extra_1.default.mkdirpSync(path_1.default.dirname(logfile));
@@ -40,7 +40,7 @@ async function devServerStart({ stdout = process.stdout, stdin = process.stdin, 
             proxy,
         },
     });
-    const { unmount } = ink_1.render(react_1.default.createElement(DevServerUI_1.DevServerUI, { header: header, devServer: server, cwd: cwd, proxyMessage: proxySubject, logfile: logfile, restartAlarm: restartAlarm }), {
+    const { unmount } = ink_1.render(react_1.default.createElement(DevServerUI_1.DevServerUI, { header: header, devServer: server, cwd: cwd, proxyMessage: proxySubject, logfile: logfile, restartAlarm: restartAlarm, children: children }), {
         stdout,
         stdin,
         patchConsole: false,

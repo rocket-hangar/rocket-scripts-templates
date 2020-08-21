@@ -19,7 +19,7 @@ const webpack_merge_1 = require("webpack-merge");
 const DevServerUI_1 = require("./DevServerUI");
 const ElectronServer_1 = require("./ElectronServer");
 const WebpackServer_1 = require("./WebpackServer");
-async function devServerStart({ mainWebpackConfig, rendererWebpackConfig, staticFileDirectories, stdout = process.stdout, stdin = process.stdin, header, cwd = process.cwd(), outDir, logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, electronSwitches = {}, restartAlarm, }) {
+async function devServerStart({ mainWebpackConfig, rendererWebpackConfig, staticFileDirectories, stdout = process.stdout, stdin = process.stdin, header, cwd = process.cwd(), outDir, logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, electronSwitches = {}, restartAlarm, children, }) {
     console.clear();
     const stream = fs_extra_1.default.createWriteStream(logfile);
     const restoreConsole = patch_console_1.patchConsole({ stdout: stream, stderr: stream, colorMode: false });
@@ -61,7 +61,7 @@ async function devServerStart({ mainWebpackConfig, rendererWebpackConfig, static
         dir: outDir,
         main: path_1.default.join(outDir, 'main.js'),
     });
-    const { unmount } = ink_1.render(react_1.default.createElement(DevServerUI_1.DevServerUI, { header: header, webpackServer: webpackServer, electronServer: electronServer, cwd: cwd, logfile: logfile, syncStaticFiles: syncStaticFilesCaster, restartAlarm: restartAlarm }), {
+    const { unmount } = ink_1.render(react_1.default.createElement(DevServerUI_1.DevServerUI, { header: header, webpackServer: webpackServer, electronServer: electronServer, cwd: cwd, logfile: logfile, syncStaticFiles: syncStaticFilesCaster, restartAlarm: restartAlarm, children: children }), {
         stdout,
         stdin,
         patchConsole: false,

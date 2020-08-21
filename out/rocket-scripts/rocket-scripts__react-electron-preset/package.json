@@ -13,10 +13,10 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@rocket-scripts/react-electron-preset",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.0-alpha.16",
   "dependencies": {
-    "@rocket-scripts/react-preset": "^1.0.0-alpha.15",
-    "@rocket-scripts/utils": "^1.0.0-alpha.15",
+    "@rocket-scripts/react-preset": "^1.0.0-alpha.16",
+    "@rocket-scripts/utils": "^1.0.0-alpha.16",
     "fork-ts-checker-webpack-plugin": "^5.0.14",
     "fs-extra": "^9.0.1",
     "webpack": "^4.44.1",

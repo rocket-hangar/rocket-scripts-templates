@@ -20,7 +20,7 @@ const tmp_1 = __importDefault(require("tmp"));
 const webpack_1 = require("webpack");
 const webpack_merge_1 = require("webpack-merge");
 const webpack_node_externals_1 = __importDefault(require("webpack-node-externals"));
-async function start({ cwd = process.cwd(), app, staticFileDirectories: _staticFileDirectories = ['{cwd}/public'], outDir: _outDir = '{cwd}/dev/{app}', electronSwitches = {}, env = process.env, tsconfig: _tsconfig = '{cwd}/tsconfig.json', mainWebpackConfig: _mainWebpackConfig, rendererWebpackConfig: _rendererWebpackConfig, babelLoaderOptions: _babelLoaderOptions, logfile: _logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, stdout = process.stdout, stdin = process.stdin, }) {
+async function start({ cwd = process.cwd(), app, staticFileDirectories: _staticFileDirectories = ['{cwd}/public'], outDir: _outDir = '{cwd}/dev/{app}', electronSwitches = {}, env = process.env, tsconfig: _tsconfig = '{cwd}/tsconfig.json', mainWebpackConfig: _mainWebpackConfig, rendererWebpackConfig: _rendererWebpackConfig, babelLoaderOptions: _babelLoaderOptions, logfile: _logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, stdout = process.stdout, stdin = process.stdin, children, }) {
     console.log('Start Server...');
     const staticFileDirectories = _staticFileDirectories.map((dir) => utils_1.icuFormat(dir, { cwd, app }));
     const outDir = utils_1.icuFormat(_outDir, { cwd, app });
@@ -170,6 +170,7 @@ async function start({ cwd = process.cwd(), app, staticFileDirectories: _staticF
         stdout,
         restartAlarm,
         logfile,
+        children,
     };
     const close = await electron_dev_server_1.devServerStart(startParams);
     return {

@@ -21,7 +21,7 @@ const filterReactEnv_1 = require("./utils/filterReactEnv");
 const getAppEntry_1 = require("./utils/getAppEntry");
 const observeAliasChange_1 = require("./utils/observeAliasChange");
 const observeAppEntryChange_1 = require("./utils/observeAppEntryChange");
-async function start({ cwd = process.cwd(), app, staticFileDirectories: _staticFileDirectories = ['{cwd}/public'], env = process.env, tsconfig: _tsconfig = '{cwd}/tsconfig.json', port: _port = 'random', hostname = 'localhost', webpackConfig: _webpackConfig, webpackDevServerConfig: _webpackDevServerConfig, babelLoaderOptions: _babelLoaderOptions, logfile: _logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, stdout = process.stdout, stdin = process.stdin, }) {
+async function start({ cwd = process.cwd(), app, staticFileDirectories: _staticFileDirectories = ['{cwd}/public'], env = process.env, tsconfig: _tsconfig = '{cwd}/tsconfig.json', port: _port = 'random', hostname = 'localhost', webpackConfig: _webpackConfig, webpackDevServerConfig: _webpackDevServerConfig, babelLoaderOptions: _babelLoaderOptions, logfile: _logfile = tmp_1.default.fileSync({ mode: 0o644, postfix: '.log' }).name, stdout = process.stdout, stdin = process.stdin, children, }) {
     console.log('Start Server...');
     const port = typeof _port === 'number' ? _port : await portfinder_1.getPortPromise();
     const staticFileDirectories = _staticFileDirectories.map((dir) => utils_1.icuFormat(dir, { cwd, app }));
@@ -135,6 +135,7 @@ async function start({ cwd = process.cwd(), app, staticFileDirectories: _staticF
         stdout,
         stdin,
         restartAlarm,
+        children,
     };
     const close = await webpack_dev_server_1.devServerStart(startParams);
     return {

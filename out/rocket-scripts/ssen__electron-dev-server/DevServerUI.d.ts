@@ -11,5 +11,6 @@ export interface DevServerUIProps {
     cwd: string;
     logfile: string;
     restartAlarm?: Observable<string[]>;
+    children?: ReactNode;
 }
-export declare function DevServerUI({ header, webpackServer, electronServer, syncStaticFiles, cwd, logfile, restartAlarm, }: DevServerUIProps): JSX.Element;
+export declare function DevServerUI({ header, webpackServer, electronServer, syncStaticFiles, cwd, logfile, restartAlarm, children, }: DevServerUIProps): JSX.Element;

@@ -13,7 +13,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@rocket-scripts/react-preset",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.0-alpha.16",
   "dependencies": {
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.1",
@@ -23,7 +23,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
     "babel-plugin-named-asset-import": "^0.3.6",
     "react": "^16.13.1",
-    "@rocket-scripts/utils": "^1.0.0-alpha.15",
+    "@rocket-scripts/utils": "^1.0.0-alpha.16",
     "fork-ts-checker-webpack-plugin": "^5.0.14",
     "fs-extra": "^9.0.1",
     "webpack": "^4.44.1",

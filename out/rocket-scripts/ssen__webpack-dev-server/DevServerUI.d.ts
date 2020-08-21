@@ -9,5 +9,6 @@ export interface DevServerUIProps {
     logfile: string;
     proxyMessage?: Observable<TimeMessage[]>;
     restartAlarm?: Observable<string[]>;
+    children?: ReactNode;
 }
-export declare function DevServerUI({ header, devServer, cwd, logfile, proxyMessage, restartAlarm, }: DevServerUIProps): JSX.Element;
+export declare function DevServerUI({ header, devServer, cwd, logfile, proxyMessage, restartAlarm, children, }: DevServerUIProps): JSX.Element;

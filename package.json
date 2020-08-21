@@ -6,7 +6,7 @@
     "out/rocket-scripts/*",
     "out/rocket-punch/*",
     "templates/*",
-    "snippets/*"
+    "examples/*"
   ],
   "scripts": {
     "import": "ts-node scripts/import.ts",

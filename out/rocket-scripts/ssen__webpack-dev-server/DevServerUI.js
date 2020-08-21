@@ -30,7 +30,7 @@ const ink_1 = require("ink");
 const os_1 = __importDefault(require("os"));
 const react_1 = __importStar(require("react"));
 const types_1 = require("./types");
-function DevServerUI({ header, devServer, cwd, logfile, proxyMessage, restartAlarm, }) {
+function DevServerUI({ header, devServer, cwd, logfile, proxyMessage, restartAlarm, children, }) {
     const [status, setStatus] = react_1.useState(types_1.DevServerStatus.STARTING);
     const [webpackStats, setWebpackStats] = react_1.useState({ status: 'waiting' });
     const [restartMessages, setRestartMessages] = react_1.useState(null);
@@ -139,7 +139,8 @@ function DevServerUI({ header, devServer, cwd, logfile, proxyMessage, restartAla
                 "[",
                 date_fns_1.format(new Date(time), 'hh:mm:ss'),
                 "] ",
-                message)))))));
+                message))))),
+        children));
 }
 exports.DevServerUI = DevServerUI;
 //# sourceMappingURL=DevServerUI.js.map
