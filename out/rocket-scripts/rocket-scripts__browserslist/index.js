@@ -11,11 +11,19 @@ exports.defaultQuery = {
     package: ['chrome > 60', 'firefox > 60', 'safari > 12'],
     defaults: 'current node',
 };
+function findQuery(key = '') {
+    if (key in exports.defaultQuery) {
+        //@ts-ignore
+        return exports.defaultQuery[key];
+    }
+    return undefined;
+}
 function getBrowserslistQuery({ cwd, env }) {
+    var _a;
     if (env)
         process.env.BROWSERSLIST_ENV = env;
     const query = node_1.loadConfig({ path: cwd });
-    return query || exports.defaultQuery[process.env.BROWSERSLIST_ENV || 'defaults'] || exports.defaultQuery.defaults;
+    return (_a = query !== null && query !== void 0 ? query : findQuery(process.env.BROWSERSLIST_ENV)) !== null && _a !== void 0 ? _a : exports.defaultQuery.defaults;
 }
 exports.getBrowserslistQuery = getBrowserslistQuery;
 //# sourceMappingURL=index.js.map

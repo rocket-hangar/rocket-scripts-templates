@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getCompilerOptions = void 0;
 const read_tsconfig_1 = require("@ssen/read-tsconfig");
+const fs_extra_1 = __importDefault(require("fs-extra"));
 const path_1 = __importDefault(require("path"));
 const typescript_1 = __importDefault(require("typescript"));
-const fs_extra_1 = __importDefault(require("fs-extra"));
 function getCompilerOptions({ searchPath, configName, packageInfo }) {
     const { options: tsconfig } = fs_extra_1.default.existsSync(path_1.default.join(searchPath, configName))
         ? read_tsconfig_1.readTSConfig(searchPath, configName)

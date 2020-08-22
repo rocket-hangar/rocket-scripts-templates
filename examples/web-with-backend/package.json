@@ -2,7 +2,7 @@
   "name": "web-with-backend",
   "version": "1.0.0",
   "scripts": {
-    "build": "TS_NODE_PROJECT=tsconfig.script.json ts-node -r tsconfig-paths/register scripts/build.ts",
+    "build": "TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/build.ts",
     "start": "TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=9688 -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
     "format": "prettier --write \"src/{**/*,*}/*.{ts,tsx}\"",
     "lint": "eslint \"src/{**/*,*}/*.{ts,tsx}\""
@@ -11,7 +11,7 @@
     "@rocket-scripts/web": "^1.0.0-alpha.13",
     "@ssen/eslint-config": "^1.1.0",
     "@ssen/prettier-config": "^1.0.0",
-    "@types/eslint": "^7.2.0",
+    "@types/eslint": "^7.2.1",
     "@types/express": "^4.17.7",
     "@types/prettier": "^2.0.2",
     "@types/puppeteer": "^3.0.1",
@@ -26,8 +26,8 @@
     "puppeteer": "^5.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "ts-node": "^8.10.2",
+    "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.9.5"
+    "typescript": "^4.0.2"
   }
 }

@@ -14,7 +14,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -26,7 +26,6 @@ exports.build = void 0;
 const browserslist_1 = require("@rocket-scripts/browserslist");
 const react_preset_1 = require("@rocket-scripts/react-preset");
 const utils_1 = require("@rocket-scripts/utils");
-const filterReactEnv_1 = require("@rocket-scripts/web/utils/filterReactEnv");
 const fs_extra_1 = __importDefault(require("fs-extra"));
 const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 const mini_css_extract_plugin_1 = __importDefault(require("mini-css-extract-plugin"));
@@ -38,6 +37,7 @@ const terser_webpack_plugin_1 = __importDefault(require("terser-webpack-plugin")
 const webpack_1 = __importStar(require("webpack"));
 const webpack_bundle_analyzer_1 = require("webpack-bundle-analyzer");
 const webpack_merge_1 = require("webpack-merge");
+const filterReactEnv_1 = require("./utils/filterReactEnv");
 const getAppEntry_1 = require("./utils/getAppEntry");
 async function build({ cwd = process.cwd(), app, staticFileDirectories: _staticFileDirectories = ['{cwd}/public'], outDir: _outDir = '{cwd}/out/{app}', env = {}, tsconfig: _tsconfig = '{cwd}/tsconfig.json', webpackConfig: _webpackConfig, babelLoaderOptions: _babelLoaderOptions, devtool = 'source-map', }) {
     const outDir = utils_1.icuFormat(_outDir, { cwd, app });

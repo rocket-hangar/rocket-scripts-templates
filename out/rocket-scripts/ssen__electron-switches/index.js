@@ -34,7 +34,8 @@ exports.electronSwitchesYargsOptions = {
     'no-sandbox': { type: 'boolean', describe },
 };
 function toElectronArgv(values) {
-    return Object.keys(values).reduce((args, key) => {
+    return Object.keys(values).reduce((args, _key) => {
+        const key = _key;
         if (!!exports.electronSwitchesYargsOptions[key]) {
             switch (exports.electronSwitchesYargsOptions[key].type) {
                 case 'boolean':

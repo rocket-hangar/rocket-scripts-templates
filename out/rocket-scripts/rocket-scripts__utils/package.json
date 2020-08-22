@@ -13,12 +13,12 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@rocket-scripts/utils",
-  "version": "1.0.0-alpha.16",
+  "version": "1.0.0-alpha.17",
   "dependencies": {
     "fs-extra": "^9.0.1",
     "eslint-loader": "^4.0.2",
-    "eslint": "^7.6.0",
-    "intl-messageformat": "^9.2.3",
+    "eslint": "^7.7.0",
+    "intl-messageformat": "^9.3.3",
     "cfonts": "^2.8.6"
   }
 }

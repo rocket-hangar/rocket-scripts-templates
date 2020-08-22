@@ -13,15 +13,15 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@rocket-scripts/react-electron-preset",
-  "version": "1.0.0-alpha.16",
+  "version": "1.0.0-alpha.17",
   "dependencies": {
-    "@rocket-scripts/react-preset": "^1.0.0-alpha.16",
-    "@rocket-scripts/utils": "^1.0.0-alpha.16",
-    "fork-ts-checker-webpack-plugin": "^5.0.14",
+    "@rocket-scripts/react-preset": "^1.0.0-alpha.17",
+    "@rocket-scripts/utils": "^1.0.0-alpha.17",
+    "fork-ts-checker-webpack-plugin": "^5.1.0",
     "fs-extra": "^9.0.1",
     "webpack": "^4.44.1",
     "eslint-loader": "^4.0.2",
-    "eslint": "^7.6.0",
-    "webpack-merge": "^5.1.1"
+    "eslint": "^7.7.0",
+    "webpack-merge": "^5.1.2"
   }
 }

@@ -1,4 +1,4 @@
-import { LiteralUnion, PackageJson } from 'type-fest';
+import { LiteralUnion, PackageJson, TsConfigJson } from 'type-fest';
 export interface PackageConfig {
     /**
      * version
@@ -68,8 +68,8 @@ export interface PackageInfo {
     module: 'commonjs' | 'esm';
     access: 'public' | 'private' | undefined;
     registry: string | undefined;
-    compilerOptions: object;
-    packageJson: object;
+    compilerOptions: TsConfigJson.CompilerOptions;
+    packageJson: PackageJson;
 }
 export interface PublishOption {
     name: string;

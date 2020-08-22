@@ -19,9 +19,7 @@ function createVisitor({ src, ctx, fileName, }) {
                 rootDir: src,
             });
             if (importPath !== rewrittenImportPath) {
-                const newNode = typescript_1.default.getMutableClone(node);
-                newNode.moduleSpecifier = typescript_1.default.createLiteral(rewrittenImportPath);
-                return newNode;
+                return typescript_1.default.factory.updateImportDeclaration(node, undefined, undefined, undefined, typescript_1.default.createLiteral(rewrittenImportPath));
             }
         }
         // import('?')
@@ -35,11 +33,10 @@ function createVisitor({ src, ctx, fileName, }) {
                 rootDir: src,
             });
             if (importPath !== rewrittenImportPath) {
-                const newNode = typescript_1.default.getMutableClone(node);
-                const newArguments = [...node.arguments];
-                newArguments[0] = typescript_1.default.createStringLiteral(rewrittenImportPath);
-                newNode.arguments = typescript_1.default.createNodeArray(newArguments);
-                return newNode;
+                return typescript_1.default.factory.updateCallExpression(node, node.expression, node.typeArguments, [
+                    typescript_1.default.createStringLiteral(rewrittenImportPath),
+                    ...node.arguments.slice(1),
+                ]);
             }
         }
         // require.resolve('?')
@@ -56,11 +53,10 @@ function createVisitor({ src, ctx, fileName, }) {
                 rootDir: src,
             });
             if (importPath !== rewrittenImportPath) {
-                const newNode = typescript_1.default.getMutableClone(node);
-                const newArguments = [...node.arguments];
-                newArguments[0] = typescript_1.default.createStringLiteral(rewrittenImportPath);
-                newNode.arguments = typescript_1.default.createNodeArray(newArguments);
-                return newNode;
+                return typescript_1.default.factory.updateCallExpression(node, node.expression, node.typeArguments, [
+                    typescript_1.default.createStringLiteral(rewrittenImportPath),
+                    ...node.arguments.slice(1),
+                ]);
             }
         }
         // require('?')
@@ -75,11 +71,10 @@ function createVisitor({ src, ctx, fileName, }) {
                 rootDir: src,
             });
             if (importPath !== rewrittenImportPath) {
-                const newNode = typescript_1.default.getMutableClone(node);
-                const newArguments = [...node.arguments];
-                newArguments[0] = typescript_1.default.createStringLiteral(rewrittenImportPath);
-                newNode.arguments = typescript_1.default.createNodeArray(newArguments);
-                return newNode;
+                return typescript_1.default.factory.updateCallExpression(node, node.expression, node.typeArguments, [
+                    typescript_1.default.createStringLiteral(rewrittenImportPath),
+                    ...node.arguments.slice(1),
+                ]);
             }
         }
         return typescript_1.default.visitEachChild(node, visitor, ctx);

@@ -13,9 +13,9 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@ssen/import-path-rewrite",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "dependencies": {
-    "@ssen/rewrite-src-path": "^2.1.3",
-    "typescript": "^3.9.7"
+    "@ssen/rewrite-src-path": "^2.2.0",
+    "typescript": "^4.0.2"
   }
 }

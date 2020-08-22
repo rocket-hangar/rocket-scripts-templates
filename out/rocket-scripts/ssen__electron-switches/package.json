@@ -13,8 +13,6 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "name": "@ssen/electron-switches",
-  "version": "1.0.0-alpha.16",
-  "dependencies": {
-    "yargs": "^15.4.1"
-  }
+  "version": "1.0.0-alpha.17",
+  "dependencies": {}
 }
