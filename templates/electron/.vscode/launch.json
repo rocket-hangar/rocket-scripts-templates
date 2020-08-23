@@ -1,0 +1,37 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "Attach Start",
+      "type": "node",
+      "request": "attach",
+      // @see start script of package.json
+      "port": 9488
+    },
+    {
+      "name": "Attach Main Process",
+      "type": "node",
+      "request": "attach",
+      // @see scripts/start.ts
+      "port": 9365,
+      "restart": true,
+      "timeout": 100000
+    },
+    {
+      "name": "Attach Renderer Process",
+      "type": "chrome",
+      "request": "attach",
+      // @see scripts/start.ts
+      "port": 9366,
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}",
+      "timeout": 100000
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Attach Main + Renderer",
+      "configurations": ["Attach Main Process", "Attach Renderer Process"]
+    }
+  ]
+}

@@ -6,7 +6,7 @@
       "type": "node",
       "request": "attach",
       // @see start script of package.json
-      "port": 9688
+      "port": 9788
     },
     {
       "name": "Attach Chrome",

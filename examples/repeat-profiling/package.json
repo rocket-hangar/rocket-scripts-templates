@@ -2,8 +2,8 @@
   "name": "repeat-profiling",
   "version": "1.0.0",
   "scripts": {
-    "app:start": "TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=9788 -r ts-node/register scripts/start.tsx",
-    "start": "yarn run app:start",
+    "start": "TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/start.tsx",
+    "start:debug": "TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=9788 -r ts-node/register scripts/start.tsx",
     "format": "prettier --write \"src/{**/*,*}/*.{ts,tsx}\"",
     "lint": "eslint \"src/{**/*,*}/*.{ts,tsx}\""
   },

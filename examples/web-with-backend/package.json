@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/build.ts",
-    "start": "TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=9688 -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
+    "start": "TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
+    "start:debug": "TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=9688 -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
     "format": "prettier --write \"src/{**/*,*}/*.{ts,tsx}\"",
     "lint": "eslint \"src/{**/*,*}/*.{ts,tsx}\""
   },
