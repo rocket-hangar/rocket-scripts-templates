@@ -7,9 +7,9 @@
     "app:pack": "TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/pack.ts",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook --output-dir out/storybook",
-    "build": "npm run app:build",
-    "start": "npm run app:start",
-    "pack": "npm run app:pack",
+    "build": "yarn run app:build",
+    "start": "yarn run app:start",
+    "pack": "yarn run app:pack",
     "test": "jest --colors",
     "coverage": "jest --coverage",
     "format": "prettier --write \"src/{**/*,*}/*.{ts,tsx}\"",
@@ -55,7 +55,6 @@
     "puppeteer-core": "^5.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "storybook": "^6.0.16",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
