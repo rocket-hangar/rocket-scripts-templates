@@ -3,7 +3,7 @@
 ## Use this template
 
 ```sh
-# create a project directory using this template
+# create a workspace directory
 npx generate-github-directory https://github.com/rocket-hangar/workspace-template my-project
 cd my-project
 
@@ -17,6 +17,9 @@ yarn
 
 # start
 cd my-app
+direnv allow .
+
+# start
 yarn run start
 ```
 
