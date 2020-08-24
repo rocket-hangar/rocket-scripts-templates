@@ -1,0 +1,5 @@
+'@myorg/*':
+  version: 0.1.0
+  module: commonjs
+#  access: private
+#  registry: https://npm.pkg.github.com

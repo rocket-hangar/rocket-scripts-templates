@@ -1,19 +1,35 @@
 {
   "private": true,
-  "author": "SSen",
+  "version": "2020.08.24",
+  "author": "SSen <i@ssen.name>",
   "license": "MIT",
+  "repository": "github:rocket-hangar/rocket-scrpts-templates",
   "workspaces": [
-    "out/rocket-scripts/*",
-    "out/rocket-punch/*",
     "templates/*",
-    "examples/*"
+    "examples/*",
+    "out/**/*"
   ],
   "scripts": {
-    "import": "node -r dotenv/config -r ts-node/register scripts/import.ts"
+    "import": "node -r ts-node/register scripts/import.ts",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint \"**/*.{js,ts,tsx}\""
+  },
+  "lint-staged": {
+    "**/src/{**/*,*}.{ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ]
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
-    "dotenv": "^8.2.0",
+    "@ssen/eslint-config": "^1.1.0",
+    "@ssen/prettier-config": "^1.0.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "markdown-source-import": "^1.3.1",
+    "prettier": "^2.0.5",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }

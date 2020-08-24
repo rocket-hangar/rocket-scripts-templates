@@ -2,18 +2,12 @@
   "name": "repeat-profiling",
   "version": "1.0.0",
   "scripts": {
-    "start": "TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/start.tsx",
-    "start:debug": "TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=9788 -r ts-node/register scripts/start.tsx",
-    "format": "prettier --write \"src/{**/*,*}/*.{ts,tsx}\"",
-    "lint": "eslint \"src/{**/*,*}/*.{ts,tsx}\""
+    "start": "node -r ts-node/register scripts/start.tsx",
+    "start:debug": "node --inspect-brk=${INSPECT_START:-9788} -r ts-node/register scripts/start.tsx"
   },
   "devDependencies": {
-    "@rocket-scripts/web": "^1.0.0-alpha.13",
-    "@ssen/eslint-config": "^1.1.0",
-    "@ssen/prettier-config": "^1.0.0",
-    "@types/eslint": "^7.2.1",
+    "@rocket-scripts/web": "^1.0.0-alpha.18",
     "@types/fs-extra": "^9.0.1",
-    "@types/prettier": "^2.0.2",
     "@types/puppeteer": "^3.0.1",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
@@ -21,11 +15,8 @@
     "@types/webpack-env": "^1.15.1",
     "chokidar": "^3.4.2",
     "date-fns": "^2.15.0",
-    "eslint": "^7.7.0",
-    "eslint-config-prettier": "^6.11.0",
     "fs-extra": "^9.0.1",
     "ink": "^3.0.4",
-    "prettier": "^2.0.5",
     "puppeteer": "^5.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -5,19 +5,17 @@ import puppeteer, { Browser } from 'puppeteer-core';
   // main process debugging port
   // @see https://www.jetbrains.com/help/webstorm/run-debug-configuration-node-js-remote-debug.html
   // @see https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration
-  const inspectPort: number = 9365;
+  const inspectPort: number = +(process.env.INSPECT_MAIN ?? 9365);
 
   // renderer process debugging port
   // @see https://www.jetbrains.com/help/webstorm/run-debug-configuration-node-js-remote-debug.html
   // @see https://github.com/microsoft/vscode-chrome-debug#attach
-  const remoteDebuggingPort: number = 9366;
+  const remoteDebuggingPort: number = +(process.env.INSPECT_RENDERER ?? 9366);
 
   await start({
     app: 'app',
     electronSwitches: {
-      // only enable this switch when you need to debug main process
       'inspect-brk': `${inspectPort}`,
-
       'remote-debugging-port': remoteDebuggingPort,
     },
     // type ctrl + space (your code completion shortcut on your IDE)

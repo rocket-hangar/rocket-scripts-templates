@@ -1,0 +1,7 @@
+# copy to .envrc
+# direnv allow .
+
+export INSPECT_START=9488
+export INSPECT_MAIN=9365
+export INSPECT_RENDERER=9366
+export TS_NODE_PROJECT="tsconfig.script.json"

@@ -1,9 +1,12 @@
 import { build as webBuild } from '@rocket-scripts/web';
+import path from 'path';
 import { build as packagesBuild } from 'rocket-punch/build';
+import { readEntry } from 'rocket-punch/entry/readEntry';
 import { publish as packagesPublish } from 'rocket-punch/publish';
-import { entry } from './packages';
 
 (async () => {
+  const entry = readEntry({ cwd: path.dirname(__dirname) });
+
   // it will create the web static files in `out/client`
   // upload it to your static file hosting
   await webBuild({

@@ -3,11 +3,21 @@
 ## Use this template
 
 ```sh
-npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/web project-directory
-cd project-directory
-git init
-yarn # or npm install
-yarn start # or npm start
+# create a project directory using this template
+npx generate-github-directory https://github.com/rocket-hangar/workspace-template my-project
+cd my-project
+
+# create an app
+npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/web my-app
+
+# add "my-app" to workspaces of package.json
+
+# install
+yarn
+
+# start
+cd my-app
+yarn run start
 ```
 
 ## Scripts
@@ -18,8 +28,6 @@ yarn start # or npm start
 - `yarn run storybook:build` build storybook to `out/storybook`
 - `yarn run test` jest test
 - `yarn run coverage` jest test to create coverage report
-- `yarn run format` format source codes by prettier
-- `yarn run lint` lint source codes by eslint
 
 ## Directories
 

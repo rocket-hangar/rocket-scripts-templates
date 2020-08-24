@@ -1,7 +1,7 @@
-const {jestPreset} = require('@rocket-scripts/web');
+const jestPreset = require('@rocket-scripts/electron/jest-preset');
 
 module.exports = {
   ...jestPreset,
-  
+
   // config
 };

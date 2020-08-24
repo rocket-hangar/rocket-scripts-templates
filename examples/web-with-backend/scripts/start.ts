@@ -3,11 +3,8 @@ import { start } from '@rocket-scripts/web';
 import puppeteer from 'puppeteer';
 
 (async () => {
-  // you can debug server process with 9688
-  // @see scripts of package.json `"start": "node --inspect-brk=9688..."`
-  // you can debug web process with 9222
-  const remoteDebuggingPort: number = 9222;
-  const serverPort: number = 9455;
+  const remoteDebuggingPort: number = +(process.env.INSPECT_CHROME ?? 9222);
+  const serverPort: number = +(process.env.API_SERVER_PORT ?? 9455);
   
   // start back-end server
   await serverStart({ port: serverPort });

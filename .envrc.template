@@ -1,0 +1,5 @@
+# 1. install https://direnv.net/
+# 2. copy this file to .envrc
+# 3. direnv allow .
+export ROCKET_PUNCH_HOME=/your/workspace/rocket-punch
+export ROCKET_SCRIPTS_HOME=/your/workspace/rocket-scripts

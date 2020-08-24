@@ -102,8 +102,8 @@ function ProfileRepeater({
 }
 
 (async () => {
-  const remoteDebuggingPort: number = 9222;
-  const webPort: number = 9633;
+  const remoteDebuggingPort: number = +(process.env.INSPECT_CHROME ?? 9222);
+  const webPort: number = +(process.env.DEV_SERVER_PORT ?? 9633);
 
   await fs.mkdirp(profileStore);
 

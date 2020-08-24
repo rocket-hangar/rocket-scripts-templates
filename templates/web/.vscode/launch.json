@@ -5,14 +5,12 @@
       "name": "Attach Start",
       "type": "node",
       "request": "attach",
-      // @see start script of package.json
       "port": 9588
     },
     {
       "name": "Attach Chrome",
       "type": "chrome",
       "request": "attach",
-      // @see scripts/start.ts
       "port": 9222,
       "sourceMaps": true,
       "webRoot": "${workspaceFolder}"
