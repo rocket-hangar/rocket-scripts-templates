@@ -17,6 +17,7 @@ yarn
 
 # start
 cd my-app
+cp .envrc.template .envrc
 direnv allow .
 
 # start
