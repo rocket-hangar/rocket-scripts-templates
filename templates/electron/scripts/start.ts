@@ -15,7 +15,8 @@ import puppeteer, { Browser } from 'puppeteer-core';
   await start({
     app: 'app',
     electronSwitches: {
-      'inspect-brk': `${inspectPort}`,
+      // TODO only enable this switch when you want to debug main process
+      //'inspect-brk': `${inspectPort}`,
       'remote-debugging-port': remoteDebuggingPort,
     },
     // type ctrl + space (your code completion shortcut on your IDE)
