@@ -24,6 +24,23 @@ direnv allow .
 yarn run start
 ```
 
+## Without yarn workspaces
+
+```sh
+# create an app
+npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/electron my-app
+
+cd my-app
+cp .envrc.template .envrc
+direnv allow .
+
+# install
+npm install # or yarn
+
+# start
+npm run start # or yarn run start
+```
+
 ## Scripts
 
 - `yarn run start` start development (see `scripts/start.ts`)
