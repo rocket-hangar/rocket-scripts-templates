@@ -13,7 +13,8 @@ So you can improve your app with the profiles as proofs.
 ```sh
 npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/samples/repeat-profiling project-directory
 cd project-directory
-git init
 yarn # or npm install
-yarn start # or npm start
+cp .envrc.template .envrc
+direnv allow .
+yarn run start # or npm run start
 ```
