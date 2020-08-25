@@ -9,8 +9,9 @@ but, I'm not recommend this sample. in this case I think that monorepo is better
 ```sh
 npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/samples/web-with-backend project-directory
 cd project-directory
-git init
 yarn # or npm install
+cp .envrc.template .envrc
+direnv allow .
 yarn start # or npm start
 ```
 
