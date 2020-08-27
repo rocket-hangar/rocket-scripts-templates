@@ -1,0 +1,8 @@
+{
+  "name": "myapp",
+  "version": "0.1.0",
+  "author": "Your Name <your@email.com>",
+  "description": "App Description",
+  "repository": "github:yourid/yourrepo",
+  "main": "main.js"
+}
