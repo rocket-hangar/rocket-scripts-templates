@@ -16,6 +16,7 @@ import puppeteer from 'puppeteer';
   const browser = await puppeteer.launch({
     //userDataDir: process.env.CHROMIUM_USER_DATA_DEBUG,
     headless: false,
+    defaultViewport: null,
     args: ['--start-fullscreen', `--remote-debugging-port=${remoteDebuggingPort}`],
     devtools: true,
   });
