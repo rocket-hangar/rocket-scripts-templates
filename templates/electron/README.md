@@ -17,8 +17,6 @@ yarn
 
 # directory
 cd my-app
-cp .envrc.template .envrc
-direnv allow .
 
 # start
 yarn run start
@@ -31,8 +29,6 @@ yarn run start
 npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/electron my-app
 
 cd my-app
-cp .envrc.template .envrc
-direnv allow .
 
 # install
 npm install # or yarn

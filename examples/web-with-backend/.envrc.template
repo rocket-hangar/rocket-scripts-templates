@@ -6,4 +6,3 @@ export INSPECT_START=9688
 # you have to set the "Target discovery settings" of "chrome://inspect" on your browser
 export INSPECT_CHROME=9222
 export API_SERVER_PORT=9455
-export TS_NODE_PROJECT="tsconfig.script.json"

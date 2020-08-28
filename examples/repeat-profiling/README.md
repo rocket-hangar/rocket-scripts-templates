@@ -14,7 +14,5 @@ So you can improve your app with the profiles as proofs.
 npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/samples/repeat-profiling project-directory
 cd project-directory
 yarn # or npm install
-cp .envrc.template .envrc
-direnv allow .
 yarn run start # or npm run start
 ```

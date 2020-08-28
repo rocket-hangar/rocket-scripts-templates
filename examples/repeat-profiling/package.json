@@ -2,11 +2,11 @@
   "name": "repeat-profiling",
   "version": "1.0.0",
   "scripts": {
-    "start": "node -r ts-node/register scripts/start.tsx",
-    "start:debug": "node --inspect-brk=${INSPECT_START:-9788} -r ts-node/register scripts/start.tsx"
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/start.tsx",
+    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=${INSPECT_START-9788} -r ts-node/register scripts/start.tsx"
   },
   "devDependencies": {
-    "@rocket-scripts/web": "^1.0.1",
+    "@rocket-scripts/web": "^1.0.3",
     "@types/fs-extra": "^9.0.1",
     "@types/puppeteer": "^3.0.1",
     "@types/react": "^16.9.48",
@@ -14,6 +14,7 @@
     "@types/styled-components": "^5.1.2",
     "@types/webpack-env": "^1.15.1",
     "chokidar": "^3.4.2",
+    "cross-env": "^7.0.2",
     "date-fns": "^2.16.0",
     "fs-extra": "^9.0.1",
     "ink": "^3.0.4",
