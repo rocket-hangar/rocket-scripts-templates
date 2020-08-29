@@ -2,8 +2,8 @@
   "name": "repeat-profiling",
   "version": "1.0.0",
   "scripts": {
-    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/start.tsx",
-    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=${INSPECT_START-9788} -r ts-node/register scripts/start.tsx"
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json DEV_SERVER_PORT=9633 INSPECT_CHROME=9222 node -r ts-node/register scripts/start.tsx",
+    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json DEV_SERVER_PORT=9633 INSPECT_CHROME=9222 node --inspect-brk=9788 -r ts-node/register scripts/start.tsx"
   },
   "devDependencies": {
     "@rocket-scripts/web": "^1.0.3",

@@ -1,9 +1,8 @@
-# copy to .envrc
+# cp .envrc.template .envrc
 # direnv allow .
+# or set your system envs
 
-export INSPECT_START=9488
-export INSPECT_MAIN=9365
-export INSPECT_RENDERER=9366
+# electron-builder environments
 
 #export CSC_LINK=""
 #export CSC_KEY_PASSWORD=""

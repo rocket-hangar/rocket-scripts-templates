@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/build.ts",
-    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
-    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=${INPSECT_START-9688} -r ts-node/register -r tsconfig-paths/register scripts/start.ts"
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json API_SERVER_PORT=9455 INSPECT_CHROME=9222 node -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
+    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json API_SERVER_PORT=9455 INSPECT_CHROME=9222 node --inspect-brk=9688 -r ts-node/register -r tsconfig-paths/register scripts/start.ts"
   },
   "devDependencies": {
     "@rocket-scripts/web": "^1.0.3",

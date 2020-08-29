@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/build.ts",
-    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/start.ts",
-    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json node --inspect-brk=${INSPECT_START-9488} -r ts-node/register scripts/start.ts",
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_MAIN=9365 INSPECT_RENDERER=9366 node -r ts-node/register scripts/start.ts",
+    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_MAIN=9365 INSPECT_RENDERER=9366 node --inspect-brk=9488 -r ts-node/register scripts/start.ts",
     "pack": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/pack.ts",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook --output-dir out/storybook",
