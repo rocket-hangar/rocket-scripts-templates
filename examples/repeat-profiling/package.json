@@ -6,7 +6,7 @@
     "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json DEV_SERVER_PORT=9633 INSPECT_CHROME=9222 node --inspect-brk=9788 -r ts-node/register scripts/start.tsx"
   },
   "devDependencies": {
-    "@rocket-scripts/web": "^1.0.3",
+    "@rocket-scripts/web": "^1.0.4",
     "@types/fs-extra": "^9.0.1",
     "@types/puppeteer": "^3.0.1",
     "@types/react": "^16.9.48",

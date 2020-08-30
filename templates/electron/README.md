@@ -52,8 +52,8 @@ npm run start # or yarn run start
 - `scripts/` development scripts
 - `public/` static files (the files in this directory are apply on the webroot. e.g. `public/favicon.ico` to be `http://localhost/favicon.ico`)
 - `src/` source files
-    - `src/app` app root (this directory name `app` can look at in the `scripts/start.ts`)
-    - `src/app/main.ts` electron main process
-    - `src/app/preload.ts` electron preload process
-    - `src/app/renderer.tsx` electron renderer process
-    - `src/app/index.html` html template
+  - `src/app` app root (this directory name `app` can look at in the `scripts/start.ts`)
+  - `src/app/main.ts` electron main process
+  - `src/app/preload.ts` electron preload process
+  - `src/app/renderer.tsx` electron renderer process
+  - `src/app/index.html` html template

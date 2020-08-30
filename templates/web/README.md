@@ -51,5 +51,5 @@ npm run start # or yarn run start
 - `scripts/` development scripts
 - `public/` static files (the files in this directory are apply on the webroot. e.g. `public/favicon.ico` to be `http://localhost/favicon.ico`)
 - `src/` source files
-    - `src/app` app root (this directory name `app` can look at in the `scripts/start.ts`)
-    - `src/app/index.tsx` will bind to `src/app/index.html` (if you want to make the other app files make `.html` and `.tsx` files that have same name)
+  - `src/app` app root (this directory name `app` can look at in the `scripts/start.ts`)
+  - `src/app/index.tsx` will bind to `src/app/index.html` (if you want to make the other app files make `.html` and `.tsx` files that have same name)
