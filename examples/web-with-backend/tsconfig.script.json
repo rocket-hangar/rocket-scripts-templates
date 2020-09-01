@@ -8,5 +8,9 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "baseUrl": "src"
-  }
+  },
+  "include": [
+    "src",
+    "scripts"
+  ]
 }

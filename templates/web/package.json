@@ -2,9 +2,9 @@
   "name": "web-template",
   "version": "1.0.0",
   "scripts": {
-    "build": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/build.ts",
-    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_CHROME=9222 node -r ts-node/register scripts/start.ts",
-    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_CHROME=9222 node --inspect-brk=9588 -r ts-node/register scripts/start.ts",
+    "build": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/build.ts",
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_CHROME=9222 node -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
+    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_CHROME=9222 node --inspect-brk=9588 -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook --output-dir out/storybook",
     "test": "jest --colors",
@@ -33,6 +33,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.2"
   }
 }

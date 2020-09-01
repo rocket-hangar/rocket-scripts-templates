@@ -4,7 +4,7 @@ let window: BrowserWindow | null = null;
 
 function createWindow(): void {
   if (window) return;
-  
+
   window = new BrowserWindow({
     width: 1000,
     height: 1000,
@@ -16,17 +16,17 @@ function createWindow(): void {
     },
     backgroundColor: '#ffffff',
   });
-  
+
   if (process.env.NODE_ENV === 'development') {
     window.webContents.openDevTools({
       mode: 'bottom',
     });
   }
-  
+
   window.on('closed', function () {
     window = null;
   });
-  
+
   window.loadFile('index.html');
 }
 

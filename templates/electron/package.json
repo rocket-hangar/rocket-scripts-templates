@@ -2,10 +2,10 @@
   "name": "electron-template",
   "version": "1.0.0",
   "scripts": {
-    "build": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/build.ts",
-    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_MAIN=9365 INSPECT_RENDERER=9366 node -r ts-node/register scripts/start.ts",
-    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_MAIN=9365 INSPECT_RENDERER=9366 node --inspect-brk=9488 -r ts-node/register scripts/start.ts",
-    "pack": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register scripts/pack.ts",
+    "build": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/build.ts",
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_MAIN=9365 INSPECT_RENDERER=9366 node -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
+    "start:debug": "cross-env TS_NODE_PROJECT=tsconfig.script.json INSPECT_MAIN=9365 INSPECT_RENDERER=9366 node --inspect-brk=9488 -r ts-node/register -r tsconfig-paths/register scripts/start.ts",
+    "pack": "cross-env TS_NODE_PROJECT=tsconfig.script.json node -r ts-node/register -r tsconfig-paths/register scripts/pack.ts",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook --output-dir out/storybook",
     "test": "jest --colors",
@@ -29,7 +29,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/webpack-env": "^1.15.1",
     "cross-env": "^7.0.2",
-    "electron": "^9.2.1",
+    "electron": "^10.1.1",
     "electron-builder": "^22.8.0",
     "electron-notarize": "^1.0.0",
     "extract-zip": "^2.0.1",
@@ -39,6 +39,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.2"
   }
 }

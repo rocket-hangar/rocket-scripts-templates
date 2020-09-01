@@ -61,7 +61,9 @@ function ProfileRepeater({
 
   useEffect(() => {
     function update() {
-      setProfiles(fs.readdirSync(profileStore).filter((file) => /^animate-/.test(file)));
+      setProfiles(
+        fs.readdirSync(profileStore).filter((file) => /^animate-/.test(file)),
+      );
     }
 
     const watcher: FSWatcher = chokidar
@@ -110,7 +112,10 @@ function ProfileRepeater({
   const browser = await puppeteer.launch({
     userDataDir: process.env.CHROMIUM_USER_DATA_DEBUG,
     headless: false,
-    args: ['--start-fullscreen', `--remote-debugging-port=${remoteDebuggingPort}`],
+    args: [
+      '--start-fullscreen',
+      `--remote-debugging-port=${remoteDebuggingPort}`,
+    ],
     devtools: true,
   });
 

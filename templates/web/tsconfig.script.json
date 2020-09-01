@@ -6,6 +6,11 @@
     "module": "commonjs",
     "target": "ES2018",
     "moduleResolution": "node",
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "baseUrl": "src"
+  },
+  "include": [
+    "src",
+    "scripts"
+  ]
 }

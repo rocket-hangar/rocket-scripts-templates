@@ -27,16 +27,21 @@ import puppeteer, { Browser } from 'puppeteer-core';
     browserURL: `http://localhost:${remoteDebuggingPort}`,
   });
 
-  const page = await browser.pages().then((pages) => pages.find((page) => /index\.html$/.test(page.url())));
+  const page = await browser
+    .pages()
+    .then((pages) => pages.find((page) => /index\.html$/.test(page.url())));
 
   if (!page) {
     throw new Error(`Can't connect the page`);
   }
 
-  await page.waitForFunction(`document.querySelector('#app h1').innerHTML === 'Hello World!'`, {
-    timeout: 1000 * 60,
-    polling: 1000 * 3,
-  });
+  await page.waitForFunction(
+    `document.querySelector('#app h1').innerHTML === 'Hello World!'`,
+    {
+      timeout: 1000 * 60,
+      polling: 1000 * 3,
+    },
+  );
 
   // if you want to start with another situation
   // you can make another script file like this script file

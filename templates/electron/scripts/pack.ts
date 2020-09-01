@@ -79,7 +79,11 @@ const appId: string = 'myorg.appid';
     },
   });
 
-  const appPaths = await Promise.all([mac, win, linux]).then(([mac, win, linux]) => ({ mac, win, linux }));
+  const appPaths = await Promise.all([
+    mac,
+    win,
+    linux,
+  ]).then(([mac, win, linux]) => ({ mac, win, linux }));
 
   console.log('👍 Build successfully!', appPaths);
 })();
