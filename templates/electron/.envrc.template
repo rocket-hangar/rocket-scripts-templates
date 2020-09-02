@@ -2,11 +2,15 @@
 # direnv allow .
 # or set your system envs
 
-# electron-builder environments
+# sentry
+# ------------------------------
+# export SENTRY_DSN=""
 
-#export CSC_LINK=""
-#export CSC_KEY_PASSWORD=""
-#export WIN_CSC_LINK=""
-#export WIN_CSC_KEY_PASSWORD=""
-#export APPLE_DEVELOPER_ID=""
-#export APPLE_DEVELOPER_PASSWORD=""
+# electron-builder environments
+# ------------------------------
+# export CSC_LINK=""
+# export CSC_KEY_PASSWORD=""
+# export WIN_CSC_LINK=""
+# export WIN_CSC_KEY_PASSWORD=""
+# export APPLE_DEVELOPER_ID=""
+# export APPLE_DEVELOPER_PASSWORD=""

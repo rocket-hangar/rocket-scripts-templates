@@ -18,7 +18,8 @@
     ]
   },
   "devDependencies": {
-    "@rocket-scripts/electron": "^1.0.4",
+    "@rocket-scripts/electron": "^1.0.6",
+    "@sentry/electron": "^2.0.0",
     "@ssen/promised": "^2.2.3",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-storysource": "^6.0.21",

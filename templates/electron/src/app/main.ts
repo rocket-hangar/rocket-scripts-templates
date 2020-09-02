@@ -1,4 +1,9 @@
+import * as Sentry from '@sentry/electron';
 import { app, BrowserWindow } from 'electron';
+
+if (process.env.NODE_ENV !== 'development' && process.env.SENTRY_DSN) {
+  Sentry.init({ dsn: process.env.SENTRY_DSN });
+}
 
 let window: BrowserWindow | null = null;
 
