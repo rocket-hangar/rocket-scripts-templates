@@ -1,5 +1,5 @@
-interface Window {
-  hello: {
-    world: () => string;
-  };
-}
+declare const Sentry: typeof import('@sentry/electron');
+
+declare const hello: {
+  world: () => string;
+};

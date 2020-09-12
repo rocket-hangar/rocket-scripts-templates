@@ -1,8 +1,8 @@
-import * as Sentry from '@sentry/electron';
+import * as Sentry from '@sentry/electron/dist/main';
 import { app, BrowserWindow } from 'electron';
 
-if (process.env.NODE_ENV !== 'development' && process.env.SENTRY_DSN) {
-  Sentry.init({ dsn: process.env.SENTRY_DSN });
+if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_SENTRY_DSN) {
+  Sentry.init({ dsn: process.env.REACT_APP_SENTRY_DSN });
 }
 
 let window: BrowserWindow | null = null;

@@ -1,13 +1,12 @@
-import * as Sentry from '@sentry/electron';
 import React from 'react';
 import { render } from 'react-dom';
 import { Title } from './components/Title';
 
-if (process.env.NODE_ENV !== 'development' && process.env.SENTRY_DSN) {
-  Sentry.init({ dsn: process.env.SENTRY_DSN });
+if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_SENTRY_DSN) {
+  Sentry.init({ dsn: process.env.REACT_APP_SENTRY_DSN });
 }
 
-const text: string = window.hello.world();
+const text: string = hello.world();
 
 function App() {
   return <Title text={text} />;
