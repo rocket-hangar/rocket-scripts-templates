@@ -18,6 +18,26 @@ function App() {
 
 render(<App />, document.querySelector('#app'));
 
+if (process.env.NODE_ENV === 'development') {
+  import('web-vitals').then(
+    ({
+      getCLS,
+      getFID,
+      getFCP,
+      getLCP,
+      getTTFB,
+    }: typeof import('web-vitals')) => {
+      getCLS(console.log);
+      getFID(console.log);
+      getFCP(console.log);
+      getLCP(console.log);
+      getTTFB(console.log);
+    },
+  );
+} else {
+  // @see https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics
+}
+
 // Hot Module Replacement
 if (module.hot) {
   module.hot.accept();
