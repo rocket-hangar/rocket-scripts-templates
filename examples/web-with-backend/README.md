@@ -25,7 +25,7 @@ yarn start # or npm start
 
 ## Updates from web template
 
-- `yarn run start` script is using `node -r ts-node/register` instead of `ts-node`.  
+- `yarn run start` script is using `node -r ts-node/register` instead of `ts-node`.\
   it make available to use `--inspect-brk` to debug server process.
 - `yarn run build` script is using `rocket-punch` for make server to packages.
 - all scripts are using `-r tsconfig-paths/register`.
