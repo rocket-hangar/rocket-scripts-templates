@@ -83,7 +83,11 @@ const appId: string = 'myorg.appid';
     mac,
     win,
     linux,
-  ]).then(([mac, win, linux]) => ({ mac, win, linux }));
+  ]).then(([macPath, winPath, linuxPath]) => ({
+    mac: macPath,
+    win: winPath,
+    linux: linuxPath,
+  }));
 
   console.log('👍 Build successfully!', appPaths);
 })();

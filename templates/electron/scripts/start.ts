@@ -5,6 +5,7 @@ import puppeteer, { Browser } from 'puppeteer-core';
   // main process debugging port
   // @see https://www.jetbrains.com/help/webstorm/run-debug-configuration-node-js-remote-debug.html
   // @see https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration
+  //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const inspectPort: number = +(process.env.INSPECT_MAIN ?? 9365);
 
   // renderer process debugging port
@@ -27,15 +28,15 @@ import puppeteer, { Browser } from 'puppeteer-core';
     browserURL: `http://localhost:${remoteDebuggingPort}`,
   });
 
-  const page = await browser
+  const indexPage = await browser
     .pages()
     .then((pages) => pages.find((page) => /index\.html$/.test(page.url())));
 
-  if (!page) {
+  if (!indexPage) {
     throw new Error(`Can't connect the page`);
   }
 
-  await page.waitForFunction(
+  await indexPage.waitForFunction(
     `document.querySelector('#app h1').innerHTML === 'Hello World!'`,
     {
       timeout: 1000 * 60,

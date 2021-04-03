@@ -18,12 +18,12 @@
     ]
   },
   "devDependencies": {
-    "@rocket-scripts/electron": "^2.1.0",
+    "@rocket-scripts/electron": "^3.0.0",
     "@sentry/electron": "^2.4.0",
     "@ssen/promised": "^2.4.1",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-storysource": "^6.1.21",
-    "@storybook/react": "^6.1.21",
+    "@storybook/addon-essentials": "^6.2.2",
+    "@storybook/addon-storysource": "^6.2.2",
+    "@storybook/react": "^6.2.2",
     "@types/jest": "^26.0.22",
     "@types/puppeteer-core": "^5.4.0",
     "@types/react": "^17.0.3",

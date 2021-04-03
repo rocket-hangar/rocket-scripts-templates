@@ -17,12 +17,12 @@
     ]
   },
   "devDependencies": {
-    "@rocket-scripts/web": "^2.1.0",
-    "@sentry/browser": "^6.2.3",
-    "@sentry/tracing": "^6.2.3",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-storysource": "^6.1.21",
-    "@storybook/react": "^6.1.21",
+    "@rocket-scripts/web": "^3.0.0",
+    "@sentry/browser": "^6.2.5",
+    "@sentry/tracing": "^6.2.5",
+    "@storybook/addon-essentials": "^6.2.2",
+    "@storybook/addon-storysource": "^6.2.2",
+    "@storybook/react": "^6.2.2",
     "@types/jest": "^26.0.22",
     "@types/puppeteer": "^5.4.3",
     "@types/react": "^17.0.3",
