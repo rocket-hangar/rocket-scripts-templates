@@ -4,11 +4,11 @@
 
 ```sh
 # create a workspace directory
-npx generate-github-directory https://github.com/rocket-hangar/workspace-template my-project
+npx copy-github-directory workspace my-project
 cd my-project
 
 # create an app
-npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/web my-app
+npx copy-github-directory web my-app
 
 # add "my-app" to workspaces of package.json
 
@@ -26,7 +26,7 @@ yarn run start
 
 ```sh
 # create an app
-npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/templates/web my-app
+npx copy-github-directory web my-app
 
 cd my-app
 

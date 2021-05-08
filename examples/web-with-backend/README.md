@@ -7,7 +7,7 @@ but, I'm not recommend this sample. in this case I think that monorepo is better
 ## Run this sample
 
 ```sh
-npx generate-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/samples/web-with-backend project-directory
+npx copy-github-directory https://github.com/rocket-hangar/rocket-scripts-templates/tree/master/samples/web-with-backend project-directory
 cd project-directory
 yarn # or npm install
 yarn start # or npm start
